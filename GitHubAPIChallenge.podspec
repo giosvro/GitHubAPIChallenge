@@ -9,8 +9,9 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/giosvro/GitHubAPIChallenge.git', :tag => s.version }
 
   s.ios.deployment_target = '18.0'
-  
   s.source_files = 'GitHubAPIChallenge/**/*.{h,m}'
-  s.public_header_files = 'GitHubAPIChallenge/**/*.h'
+  s.public_header_files = 'GitHubAPIChallenge/GitHubAPIChallenge.h'
+  s.module_name = 'GitHubAPIChallenge'
+  s.header_mappings_dir = 'GitHubAPIChallenge'
 
 end
