@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '18.0'
   s.source_files = 'GitHubAPIChallenge/**/*.{h,m}'
-  s.public_header_files = 'GitHubAPIChallenge/GitHubAPIChallenge.h'
-  s.module_name = 'GitHubAPIChallenge'
-  s.header_mappings_dir = 'GitHubAPIChallenge'
+  s.public_header_files = 'GitHubAPIChallenge/Models/**/*.h', 
+                          'GitHubAPIChallenge/Services/**/*.h'
+  s.private_header_files = 'GitHubAPIChallenge/Network/**/*.h'
 
 end

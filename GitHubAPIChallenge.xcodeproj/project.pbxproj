@@ -112,20 +112,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6502DD0B2CE0077500534244 /* Models */ = {
+		6502DD0C2CE0077C00534244 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				6502DD0E2CE007C600534244 /* Commit.h */,
 				6502DD102CE007CF00534244 /* Commit.m */,
 				65EF13532CE0072D005B4241 /* Tag.h */,
 				65EF13552CE00736005B4241 /* Tag.m */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		6502DD0C2CE0077C00534244 /* Models */ = {
-			isa = PBXGroup;
-			children = (
 				65B7580E2CE00279002C5AF2 /* Repository.h */,
 				65B758102CE00282002C5AF2 /* Repository.m */,
 			);
@@ -249,6 +242,16 @@
 			path = CacheManager;
 			sourceTree = "<group>";
 		};
+		657255B22CE687A500C0C121 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6588114A2CDFC7FD000B6754 /* Requests */,
+				655DEEC12CE63CA900065659 /* CacheManager */,
+				658811462CDFC7FD000B6754 /* NetworkManager */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		658811462CDFC7FD000B6754 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				65902EEC2CE147D50036B040 /* Reponse */,
-				6502DD0C2CE0077C00534244 /* Models */,
 				65902EE62CE03F3A0036B040 /* RepositoryListRequest.h */,
 				6502DD182CE0399000534244 /* RepositoryListRequest.m */,
 			);
@@ -273,7 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				65902EED2CE147E50036B040 /* Response */,
-				6502DD0B2CE0077500534244 /* Models */,
 				65902EF02CE149BB0036B040 /* RepositoryTagsRequest.h */,
 				65902EEE2CE149B00036B040 /* RepositoryTagsRequest.m */,
 			);
@@ -293,10 +294,9 @@
 		6588114F2CDFC7FD000B6754 /* GitHubAPIChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				6502DD0C2CE0077C00534244 /* Models */,
 				652141D42CE427510054756C /* Services */,
-				6588114A2CDFC7FD000B6754 /* Requests */,
-				658811462CDFC7FD000B6754 /* NetworkManager */,
-				655DEEC12CE63CA900065659 /* CacheManager */,
+				657255B22CE687A500C0C121 /* Network */,
 				6588114B2CDFC7FD000B6754 /* GitHubAPIChallenge.h */,
 				6588114C2CDFC7FD000B6754 /* GitHubAPIChallenge.docc */,
 			);
