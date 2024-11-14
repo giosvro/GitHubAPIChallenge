@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <GitHubAPIChallenge/Owner.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, assign) NSInteger stargazersCount;
 @property (nonatomic, readonly, assign) NSInteger watchersCount;
 @property (nonatomic, readonly, copy, nullable) NSString *language;
+@property (nonatomic, readonly, strong, nullable) Owner *owner;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

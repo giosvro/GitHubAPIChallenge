@@ -19,6 +19,7 @@ FOUNDATION_EXPORT const unsigned char GitHubAPIChallengeVersionString[];
 #import <GitHubAPIChallenge/Repository.h>
 #import <GitHubAPIChallenge/Tag.h>
 #import <GitHubAPIChallenge/Commit.h>
+#import <GitHubAPIChallenge/Owner.h>
 
 // Services
 #import <GitHubAPIChallenge/RepositoryListService.h>

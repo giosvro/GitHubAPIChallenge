@@ -39,6 +39,8 @@
 		65ADEC882CDD9556009DB38B /* GitHubAPIChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65ADEC7D2CDD9556009DB38B /* GitHubAPIChallenge.framework */; };
 		65B7580F2CE00279002C5AF2 /* Repository.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B7580E2CE00279002C5AF2 /* Repository.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65B758112CE00282002C5AF2 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B758102CE00282002C5AF2 /* Repository.m */; };
+		65C062622CE6BB09005696C9 /* Owner.h in Headers */ = {isa = PBXBuildFile; fileRef = 65C062612CE6BB09005696C9 /* Owner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65C062642CE6BB10005696C9 /* Owner.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C062632CE6BB10005696C9 /* Owner.m */; };
 		65EF13542CE0072D005B4241 /* Tag.h in Headers */ = {isa = PBXBuildFile; fileRef = 65EF13532CE0072D005B4241 /* Tag.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65EF13562CE00736005B4241 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EF13552CE00736005B4241 /* Tag.m */; };
 /* End PBXBuildFile section */
@@ -89,6 +91,8 @@
 		65ADEC872CDD9556009DB38B /* GitHubAPIChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubAPIChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65B7580E2CE00279002C5AF2 /* Repository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
 		65B758102CE00282002C5AF2 /* Repository.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Repository.m; sourceTree = "<group>"; };
+		65C062612CE6BB09005696C9 /* Owner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Owner.h; sourceTree = "<group>"; };
+		65C062632CE6BB10005696C9 /* Owner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Owner.m; sourceTree = "<group>"; };
 		65EF13532CE0072D005B4241 /* Tag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
 		65EF13552CE00736005B4241 /* Tag.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +119,8 @@
 		6502DD0C2CE0077C00534244 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				65C062612CE6BB09005696C9 /* Owner.h */,
+				65C062632CE6BB10005696C9 /* Owner.m */,
 				6502DD0E2CE007C600534244 /* Commit.h */,
 				6502DD102CE007CF00534244 /* Commit.m */,
 				65EF13532CE0072D005B4241 /* Tag.h */,
@@ -352,6 +358,7 @@
 				6502DD1C2CE03D7300534244 /* RepositoryListResponse.h in Headers */,
 				65902EE92CE1478A0036B040 /* RepositoryTagsResponse.h in Headers */,
 				655DEEC32CE63D7800065659 /* CacheManager.h in Headers */,
+				65C062622CE6BB09005696C9 /* Owner.h in Headers */,
 				6502DD142CE0391000534244 /* RequestTypeProtocol.h in Headers */,
 				6502DD0F2CE007C600534244 /* Commit.h in Headers */,
 				65902EF32CE151B70036B040 /* Response.h in Headers */,
@@ -478,6 +485,7 @@
 				652141DC2CE42B260054756C /* RepositoryListService.m in Sources */,
 				65B758112CE00282002C5AF2 /* Repository.m in Sources */,
 				6502DD1E2CE03D8000534244 /* RepositoryListResponse.m in Sources */,
+				65C062642CE6BB10005696C9 /* Owner.m in Sources */,
 				652614AA2CE2C319003E5C57 /* NetworkManager.m in Sources */,
 				6502DD112CE007CF00534244 /* Commit.m in Sources */,
 			);

@@ -12,6 +12,16 @@ Pod::Spec.new do |s|
   s.source_files = 'GitHubAPIChallenge/**/*.{h,m}'
   s.public_header_files = 'GitHubAPIChallenge/Models/**/*.h', 
                           'GitHubAPIChallenge/Services/**/*.h'
+
+
+  s.private_header_files = 'GitHubAPIChallenge/Network/**/*.h'
+
+
+  # Exponha apenas os headers nas pastas Models e Services
+  s.public_header_files = 'GitHubAPIChallenge/Models/**/*.h', 
+                          'GitHubAPIChallenge/Services/**/*.h'
+
+  # Marque os headers em Network como privados para ocultá-los do cliente
   s.private_header_files = 'GitHubAPIChallenge/Network/**/*.h'
 
 end

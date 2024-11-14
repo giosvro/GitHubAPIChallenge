@@ -18,6 +18,11 @@
         _stargazersCount = [dictionary[@"stargazers_count"] isKindOfClass:[NSNumber class]] ? [dictionary[@"stargazers_count"] integerValue] : 0;
         _watchersCount = [dictionary[@"watchers_count"] isKindOfClass:[NSNumber class]] ? [dictionary[@"watchers_count"] integerValue] : 0;
         _language = [dictionary[@"language"] isKindOfClass:[NSString class]] ? [dictionary[@"language"] copy] : nil;
+        
+        NSDictionary *ownerDict = dictionary[@"owner"];
+        if (ownerDict != nil) {
+            _owner = [[Owner alloc] initWithDictionary:ownerDict];
+        }
     }
     return self;
 }
