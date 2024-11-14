@@ -9,31 +9,48 @@
 
 @implementation NetworkManager
 
-- (instancetype)initWithSession:(NSURLSession *)session {
+- (instancetype)initWithSession:(NSURLSession *)session cacheManager:(CacheManager *)cacheManager {
     self = [super init];
     if (self) {
         _session = session;
+        _cacheManager = cacheManager;
     }
     return self;
 }
 
 - (instancetype)init {
-    return [self initWithSession:[NSURLSession sharedSession]];
+    return [self initWithSession:[NSURLSession sharedSession] cacheManager:[[CacheManager alloc] init]];
 }
 
 - (void)performRequestWithConfig:(id<RequestTypeProtocol>)config
                       completion:(void(^)(id _Nullable parsedObject, NSError * _Nullable error))completion {
-    
-    // TODO: - Implement connectivity check
-    // TODO: - Implement cache
-
     @try {
         NSURLComponents *urlComponents = [self createUrlComponentsWithConfig:config];
         [self setEndpointPathWithConfig:config urlComponents:&urlComponents];
         [self setQueryItemsWithConfig:config urlComponents:&urlComponents];
-        NSURLRequest *urlRequest = [self createUrlRequestWithConfig:config urlComponents:urlComponents];
         
-        [self makeDataTaskWithRequest:urlRequest config:config completion:completion];
+        NSURLRequest *urlRequest = [self createUrlRequestWithConfig:config urlComponents:urlComponents];
+        NSString *cacheKey = urlRequest.URL.absoluteString; 
+        
+        [self makeDataTaskWithRequest:urlRequest config:config completion:^(id parsedObject, NSError *error) {
+            if (error) {
+
+                NSData *cachedData = [self.cacheManager getCacheResponseForKey:cacheKey];
+                if (cachedData) {
+                    id cachedParsedObject = [[config responseType] parseFromData:cachedData error:nil];
+                    completion(cachedParsedObject, nil);
+                } else {
+                    completion(nil, error);
+                }
+                
+            } else {
+                NSData *data = [NSJSONSerialization dataWithJSONObject:parsedObject options:0 error:nil];
+                if (data) {
+                    [self.cacheManager setCacheResponseWith:data forKey:cacheKey];
+                }
+                completion(parsedObject, nil);
+            }
+        }];
         
     } @catch (NSException *exception) {
         NSError *error = [NSError errorWithDomain:@"NetworkErrorDomain" code:500 userInfo:@{NSLocalizedDescriptionKey: exception.reason}];

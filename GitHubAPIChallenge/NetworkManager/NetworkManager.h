@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "RequestTypeProtocol.h"
+#import "CacheManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,7 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSURLSession *session;
 
-- (instancetype)initWithSession:(NSURLSession *)session;
+@property (nonatomic, strong) CacheManager *cacheManager;
+
+- (instancetype)initWithSession:(NSURLSession *)session cacheManager:(CacheManager *)cacheManager;
 
 - (instancetype)init;
 

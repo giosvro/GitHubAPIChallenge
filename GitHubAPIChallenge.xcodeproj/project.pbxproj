@@ -25,6 +25,9 @@
 		655DEEBB2CE58C7300065659 /* MockURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 655DEEBA2CE58C7300065659 /* MockURLHelper.m */; };
 		655DEEBE2CE6050100065659 /* mock_tags.json in Resources */ = {isa = PBXBuildFile; fileRef = 655DEEBD2CE6050100065659 /* mock_tags.json */; };
 		655DEEC02CE60D0800065659 /* mock_repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = 655DEEBF2CE60D0800065659 /* mock_repositories.json */; };
+		655DEEC32CE63D7800065659 /* CacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 655DEEC22CE63D7800065659 /* CacheManager.h */; };
+		655DEEC52CE63F6800065659 /* CacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 655DEEC42CE63F6800065659 /* CacheManager.m */; };
+		655DEEC82CE660BC00065659 /* CacheManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 655DEEC72CE65F2800065659 /* CacheManagerTests.m */; };
 		658811502CDFC7FD000B6754 /* GitHubAPIChallenge.h in Headers */ = {isa = PBXBuildFile; fileRef = 6588114B2CDFC7FD000B6754 /* GitHubAPIChallenge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		658811522CDFC7FD000B6754 /* GitHubAPIChallenge.docc in Sources */ = {isa = PBXBuildFile; fileRef = 6588114C2CDFC7FD000B6754 /* GitHubAPIChallenge.docc */; };
 		65902EE72CE03F3A0036B040 /* RepositoryListRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 65902EE62CE03F3A0036B040 /* RepositoryListRequest.h */; };
@@ -71,6 +74,9 @@
 		655DEEBA2CE58C7300065659 /* MockURLHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockURLHelper.m; sourceTree = "<group>"; };
 		655DEEBD2CE6050100065659 /* mock_tags.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_tags.json; sourceTree = "<group>"; };
 		655DEEBF2CE60D0800065659 /* mock_repositories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_repositories.json; sourceTree = "<group>"; };
+		655DEEC22CE63D7800065659 /* CacheManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheManager.h; sourceTree = "<group>"; };
+		655DEEC42CE63F6800065659 /* CacheManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheManager.m; sourceTree = "<group>"; };
+		655DEEC72CE65F2800065659 /* CacheManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheManagerTests.m; sourceTree = "<group>"; };
 		6588114B2CDFC7FD000B6754 /* GitHubAPIChallenge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitHubAPIChallenge.h; sourceTree = "<group>"; };
 		6588114C2CDFC7FD000B6754 /* GitHubAPIChallenge.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = GitHubAPIChallenge.docc; sourceTree = "<group>"; };
 		65902EE62CE03F3A0036B040 /* RepositoryListRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RepositoryListRequest.h; sourceTree = "<group>"; };
@@ -174,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				655DEEAB2CE5759800065659 /* Mocks */,
+				655DEEC62CE65BB700065659 /* CacheManager */,
 				655DEEAA2CE5743500065659 /* Services */,
 			);
 			path = GitHubAPIChallengeTests;
@@ -225,6 +232,23 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		655DEEC12CE63CA900065659 /* CacheManager */ = {
+			isa = PBXGroup;
+			children = (
+				655DEEC42CE63F6800065659 /* CacheManager.m */,
+				655DEEC22CE63D7800065659 /* CacheManager.h */,
+			);
+			path = CacheManager;
+			sourceTree = "<group>";
+		};
+		655DEEC62CE65BB700065659 /* CacheManager */ = {
+			isa = PBXGroup;
+			children = (
+				655DEEC72CE65F2800065659 /* CacheManagerTests.m */,
+			);
+			path = CacheManager;
+			sourceTree = "<group>";
+		};
 		658811462CDFC7FD000B6754 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +296,7 @@
 				652141D42CE427510054756C /* Services */,
 				6588114A2CDFC7FD000B6754 /* Requests */,
 				658811462CDFC7FD000B6754 /* NetworkManager */,
+				655DEEC12CE63CA900065659 /* CacheManager */,
 				6588114B2CDFC7FD000B6754 /* GitHubAPIChallenge.h */,
 				6588114C2CDFC7FD000B6754 /* GitHubAPIChallenge.docc */,
 			);
@@ -326,6 +351,7 @@
 				65EF13542CE0072D005B4241 /* Tag.h in Headers */,
 				6502DD1C2CE03D7300534244 /* RepositoryListResponse.h in Headers */,
 				65902EE92CE1478A0036B040 /* RepositoryTagsResponse.h in Headers */,
+				655DEEC32CE63D7800065659 /* CacheManager.h in Headers */,
 				6502DD142CE0391000534244 /* RequestTypeProtocol.h in Headers */,
 				6502DD0F2CE007C600534244 /* Commit.h in Headers */,
 				65902EF32CE151B70036B040 /* Response.h in Headers */,
@@ -446,6 +472,7 @@
 				6502DD1A2CE0399000534244 /* RepositoryListRequest.m in Sources */,
 				652141E52CE4312D0054756C /* RepositoryTagsService.m in Sources */,
 				65902EEF2CE149B00036B040 /* RepositoryTagsRequest.m in Sources */,
+				655DEEC52CE63F6800065659 /* CacheManager.m in Sources */,
 				65902EEB2CE147990036B040 /* RepositoryTagsResponse.m in Sources */,
 				658811522CDFC7FD000B6754 /* GitHubAPIChallenge.docc in Sources */,
 				652141DC2CE42B260054756C /* RepositoryListService.m in Sources */,
@@ -461,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				652141DE2CE42F130054756C /* RepositoryListServiceTests.m in Sources */,
+				655DEEC82CE660BC00065659 /* CacheManagerTests.m in Sources */,
 				655DEEA92CE5341800065659 /* RepositoryTagsServiceTests.m in Sources */,
 				655DEEBB2CE58C7300065659 /* MockURLHelper.m in Sources */,
 				655DEEB42CE5867500065659 /* MockURLProtocol.m in Sources */,
