@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Commit.h"
+#import <GitHubAPIChallenge/Commit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

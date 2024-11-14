@@ -6,12 +6,27 @@
 //
 
 #import "RepositoryTagsService.h"
+#import "NetworkManager.h"
+#import "RepositoryTagsRequest.h"
+#import "RepositoryTagsResponse.h"
+
+@interface RepositoryTagsService ()
+
+@property (nonatomic, strong) NetworkManager *networkManager;
+
+@end
 
 @implementation RepositoryTagsService
 
 - (nonnull instancetype)init {
-    NetworkManager *networkManager = [[NetworkManager alloc] init];
-    return [self initWithNetworkManager:networkManager];
+    self = [super init];
+    
+    if (self) {
+        NetworkManager *networkManager = [[NetworkManager alloc] init];
+        _networkManager = networkManager;
+    }
+    
+    return self;
     
 }
 

@@ -6,21 +6,28 @@
 //
 
 #import "RepositoryListService.h"
+#import "NetworkManager.h"
+#import "RepositoryListRequest.h"
+#import "RepositoryListResponse.h"
+
+@interface RepositoryListService ()
+
+@property (nonatomic, strong) NetworkManager *networkManager;
+
+@end
 
 @implementation RepositoryListService
 
-- (instancetype)init {
-    NetworkManager *defaultNetworkManager = [[NetworkManager alloc] init];
-    return [self initWithNetworkManager:defaultNetworkManager];
-}
-
-- (instancetype)initWithNetworkManager:(NetworkManager *)networkManager {
+- (nonnull instancetype)init {
     self = [super init];
+    
     if (self) {
+        NetworkManager *networkManager = [[NetworkManager alloc] init];
         _networkManager = networkManager;
     }
     
     return self;
+    
 }
 
 - (void)fetchRepositoriesForUsername:(nonnull NSString *)username completion:(nonnull void (^)(NSArray<Repository *> * _Nullable __strong, NSError * _Nullable __strong))completion {

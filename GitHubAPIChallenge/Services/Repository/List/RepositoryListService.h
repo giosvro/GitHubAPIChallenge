@@ -6,19 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NetworkManager.h"
-#import "RepositoryListRequest.h"
-#import "RepositoryListResponse.h"
+#import <GitHubAPIChallenge/Repository.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RepositoryListService : NSObject
 
-@property (nonatomic, strong) NetworkManager *networkManager;
-
 - (instancetype)init;
-
-- (instancetype)initWithNetworkManager:(NetworkManager *)networkManager;
 
 - (void)fetchRepositoriesForUsername:(NSString *)username
                           completion:(void(^)(NSArray<Repository *> * _Nullable repositories, NSError * _Nullable error))completion;

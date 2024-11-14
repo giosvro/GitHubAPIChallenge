@@ -7,7 +7,6 @@
 
 #import <Foundation/Foundation.h>
 #import "RequestTypeProtocol.h"
-#import "RepositoryTagsResponse.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

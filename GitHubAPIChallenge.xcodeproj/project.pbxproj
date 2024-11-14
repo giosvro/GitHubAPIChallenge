@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6502DD0F2CE007C600534244 /* Commit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6502DD0E2CE007C600534244 /* Commit.h */; };
+		6502DD0F2CE007C600534244 /* Commit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6502DD0E2CE007C600534244 /* Commit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6502DD112CE007CF00534244 /* Commit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6502DD102CE007CF00534244 /* Commit.m */; };
 		6502DD142CE0391000534244 /* RequestTypeProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 6502DD132CE0391000534244 /* RequestTypeProtocol.h */; };
 		6502DD1A2CE0399000534244 /* RepositoryListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6502DD182CE0399000534244 /* RepositoryListRequest.m */; };
 		6502DD1C2CE03D7300534244 /* RepositoryListResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 6502DD1B2CE03D7300534244 /* RepositoryListResponse.h */; };
 		6502DD1E2CE03D8000534244 /* RepositoryListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6502DD1D2CE03D8000534244 /* RepositoryListResponse.m */; };
-		652141DA2CE429460054756C /* RepositoryListService.h in Headers */ = {isa = PBXBuildFile; fileRef = 652141D92CE429460054756C /* RepositoryListService.h */; };
+		652141DA2CE429460054756C /* RepositoryListService.h in Headers */ = {isa = PBXBuildFile; fileRef = 652141D92CE429460054756C /* RepositoryListService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		652141DC2CE42B260054756C /* RepositoryListService.m in Sources */ = {isa = PBXBuildFile; fileRef = 652141DB2CE42B260054756C /* RepositoryListService.m */; };
 		652141DE2CE42F130054756C /* RepositoryListServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 652141DD2CE42EEE0054756C /* RepositoryListServiceTests.m */; };
-		652141E42CE4312D0054756C /* RepositoryTagsService.h in Headers */ = {isa = PBXBuildFile; fileRef = 652141E22CE4312D0054756C /* RepositoryTagsService.h */; };
+		652141E42CE4312D0054756C /* RepositoryTagsService.h in Headers */ = {isa = PBXBuildFile; fileRef = 652141E22CE4312D0054756C /* RepositoryTagsService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		652141E52CE4312D0054756C /* RepositoryTagsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 652141E32CE4312D0054756C /* RepositoryTagsService.m */; };
 		652614A82CE2C304003E5C57 /* NetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 652614A72CE2C304003E5C57 /* NetworkManager.h */; };
 		652614AA2CE2C319003E5C57 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 652614A92CE2C319003E5C57 /* NetworkManager.m */; };
@@ -34,9 +34,9 @@
 		65902EF12CE149BB0036B040 /* RepositoryTagsRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 65902EF02CE149BB0036B040 /* RepositoryTagsRequest.h */; };
 		65902EF32CE151B70036B040 /* Response.h in Headers */ = {isa = PBXBuildFile; fileRef = 65902EF22CE151B70036B040 /* Response.h */; };
 		65ADEC882CDD9556009DB38B /* GitHubAPIChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65ADEC7D2CDD9556009DB38B /* GitHubAPIChallenge.framework */; };
-		65B7580F2CE00279002C5AF2 /* Repository.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B7580E2CE00279002C5AF2 /* Repository.h */; };
+		65B7580F2CE00279002C5AF2 /* Repository.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B7580E2CE00279002C5AF2 /* Repository.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65B758112CE00282002C5AF2 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B758102CE00282002C5AF2 /* Repository.m */; };
-		65EF13542CE0072D005B4241 /* Tag.h in Headers */ = {isa = PBXBuildFile; fileRef = 65EF13532CE0072D005B4241 /* Tag.h */; };
+		65EF13542CE0072D005B4241 /* Tag.h in Headers */ = {isa = PBXBuildFile; fileRef = 65EF13532CE0072D005B4241 /* Tag.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65EF13562CE00736005B4241 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EF13552CE00736005B4241 /* Tag.m */; };
 /* End PBXBuildFile section */
 

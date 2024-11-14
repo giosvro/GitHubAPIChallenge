@@ -6,19 +6,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NetworkManager.h"
-#import "RepositoryTagsRequest.h"
-#import "RepositoryTagsResponse.h"
+#import <GitHubAPIChallenge/Tag.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RepositoryTagsService : NSObject
 
-@property (nonatomic, strong) NetworkManager *networkManager;
-
 - (nonnull instancetype) init;
-
-- (nonnull instancetype) initWithNetworkManager:(NetworkManager *)networkManager;
 
 - (void)fetchRepositoryTagsWith:(NSString *)username
                            repo:(NSString *)repo

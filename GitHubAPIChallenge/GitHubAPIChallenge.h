@@ -13,4 +13,13 @@ FOUNDATION_EXPORT double GitHubAPIChallengeVersionNumber;
 //! Project version string for GitHubAPIChallenge.
 FOUNDATION_EXPORT const unsigned char GitHubAPIChallengeVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <GitHubAPIChallenge/PublicHeader.h>
+// Public headers of GitHubAPIChallenge framework
+
+// Models
+#import <GitHubAPIChallenge/Repository.h>
+#import <GitHubAPIChallenge/Tag.h>
+#import <GitHubAPIChallenge/Commit.h>
+
+// Services
+#import <GitHubAPIChallenge/RepositoryListService.h>
+#import <GitHubAPIChallenge/RepositoryTagsService.h>
