@@ -30,24 +30,11 @@
         [self setQueryItemsWithConfig:config urlComponents:&urlComponents];
         
         NSURLRequest *urlRequest = [self createUrlRequestWithConfig:config urlComponents:urlComponents];
-        NSString *cacheKey = urlRequest.URL.absoluteString; 
         
         [self makeDataTaskWithRequest:urlRequest config:config completion:^(id parsedObject, NSError *error) {
             if (error) {
-
-                NSData *cachedData = [self.cacheManager getCacheResponseForKey:cacheKey];
-                if (cachedData) {
-                    id cachedParsedObject = [[config responseType] parseFromData:cachedData error:nil];
-                    completion(cachedParsedObject, nil);
-                } else {
-                    completion(nil, error);
-                }
-                
+                completion(nil, error);
             } else {
-                NSData *data = [NSJSONSerialization dataWithJSONObject:parsedObject options:0 error:nil];
-                if (data) {
-                    [self.cacheManager setCacheResponseWith:data forKey:cacheKey];
-                }
                 completion(parsedObject, nil);
             }
         }];
@@ -125,10 +112,24 @@
             return;
         }
         
+        NSString *cacheKey = urlRequest.URL.absoluteString;
+        
         if (![response isKindOfClass:[NSHTTPURLResponse class]] || ((NSHTTPURLResponse *)response).statusCode != 200) {
+            
+            NSData *cachedData = [self.cacheManager getCacheResponseForKey:cacheKey];
+            
+            if (cachedData) {
+                id cachedParsedObject = [[config responseType] parseFromData:cachedData error:nil];
+                completion(cachedParsedObject, nil);
+            }
+            
             NSError *responseError = [NSError errorWithDomain:@"NetworkErrorDomain" code:((NSHTTPURLResponse *)response).statusCode userInfo:@{NSLocalizedDescriptionKey: @"Invalid response from server"}];
             completion(nil, responseError);
             return;
+        }
+                
+        if (data) {
+            [self.cacheManager setCacheResponseWith:data forKey:cacheKey];
         }
         
         NSError *parseError;
