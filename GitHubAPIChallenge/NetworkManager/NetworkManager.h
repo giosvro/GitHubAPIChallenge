@@ -14,6 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSURLSession *session;
 
+- (instancetype)initWithSession:(NSURLSession *)session;
+
+- (instancetype)init;
+
 - (void)performRequestWithConfig:(id<RequestTypeProtocol>)config
                       completion:(void(^)(id _Nullable parsedObject, NSError * _Nullable error))completion;
 
