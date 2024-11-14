@@ -1,0 +1,12 @@
+[
+    {
+        "name": "8.1.0",
+        "zipball_url": "https://api.github.com/repos/onevcat/Kingfisher/zipball/refs/tags/8.1.0",
+        "tarball_url": "https://api.github.com/repos/onevcat/Kingfisher/tarball/refs/tags/8.1.0",
+        "commit": {
+            "sha": "c0940e241945e6378c01fbd45fd3815579d47ef5",
+            "url": "https://api.github.com/repos/onevcat/Kingfisher/commits/c0940e241945e6378c01fbd45fd3815579d47ef5"
+        },
+        "node_id": "MDM6UmVmMzM0ODYwMTY6cmVmcy90YWdzLzguMS4w"
+    },
+]

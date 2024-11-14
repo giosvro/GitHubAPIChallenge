@@ -10,6 +10,8 @@
 
 @interface RepositoryListRequest : NSObject <RequestTypeProtocol>
 
+- (instancetype)initWithUsername:(NSString *)username;
+
 @property (nonatomic, copy) NSString *username;
 
 @end

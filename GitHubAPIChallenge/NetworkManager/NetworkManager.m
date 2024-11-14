@@ -101,7 +101,6 @@
 - (void)makeDataTaskWithRequest:(NSURLRequest *)urlRequest
                          config:(id<RequestTypeProtocol>)config
                      completion:(void(^)(id _Nullable parsedObject, NSError * _Nullable error))completion {
-    
     NSURLSessionDataTask *task = [self.session dataTaskWithRequest:urlRequest
                                                  completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error) {
