@@ -51,7 +51,7 @@ And execute the request by:
     if (repositories) {
         self.repositories = [repositories mutableCopy];
     }
-    if (error) {
+    if (completion) {
         completion(error);
     }
 }];
